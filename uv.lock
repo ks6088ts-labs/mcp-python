@@ -651,7 +651,7 @@ wheels = [
 ]
 
 [[package]]
-name = "template-python"
+name = "mcp-python"
 version = "0.0.1"
 source = { editable = "." }
 

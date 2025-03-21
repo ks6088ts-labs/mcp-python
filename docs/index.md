@@ -1,1 +1,1 @@
-# template-python
+# mcp-python
