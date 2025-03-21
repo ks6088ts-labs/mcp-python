@@ -78,7 +78,7 @@ Here is an example of the output you should see:
 **client**
 
 ```shell
-❯ uv run python scripts/client.py
+$ uv run python scripts/client.py
 DEBUG:asyncio:Using selector: KqueueSelector
 DEBUG:mcp.server.lowlevel.server:Initializing server 'math'
 DEBUG:mcp.server.lowlevel.server:Registering handler for ListToolsRequest
@@ -442,6 +442,7 @@ Because he was outstanding in his field! 🌾😂
 **weather_server**
 
 ```shell
+$ uv run python scripts/weather_server.py
 DEBUG:mcp.server.lowlevel.server:Initializing server 'weather'
 DEBUG:mcp.server.lowlevel.server:Registering handler for ListToolsRequest
 DEBUG:mcp.server.lowlevel.server:Registering handler for CallToolRequest
