@@ -1,10 +1,16 @@
+import logging
 from typing import Any
 
 import httpx
 from mcp.server.fastmcp import FastMCP
 
+logging.basicConfig(level=logging.DEBUG)
 # Initialize FastMCP server
-mcp = FastMCP("weather")
+mcp = FastMCP(
+    "weather",
+    port=8000,
+    debug=True,
+)
 
 # Constants
 NWS_API_BASE = "https://api.weather.gov"
@@ -94,4 +100,4 @@ Forecast: {period["detailedForecast"]}
 
 if __name__ == "__main__":
     # Initialize and run the server
-    mcp.run(transport="stdio")
+    mcp.run(transport="sse")
