@@ -14,46 +14,53 @@ This is a template repository for Python
 - [uv](https://docs.astral.sh/uv/getting-started/installation/)
 - [GNU Make](https://www.gnu.org/software/make/)
 
-## Development instructions
+## Install MCP Server on Cline
 
-### Local development
+This repository contains a Python implementation of the Model Context Protocol (MCP) server. To install the MCP server, follow these steps:
 
-Use Makefile to run the project locally.
+1. Clone the repository:
 
-```shell
-# help
-make
+```bash
+# Clone the repository
+git clone https://github.com/ks6088ts-labs/mcp-python.git
+cd mcp-python
 
-# install dependencies for development
+# Install dependencies
 make install-deps-dev
 
-# run tests
-make test
-
-# run CI tests
-make ci-test
+# (Optional) Confirm MCP server is working
+# You can run the MCP server locally to test it.
+uv run python scripts/weather.py
 ```
 
-### Docker development
+2. Install the MCP server on Cline:
 
-```shell
-# build docker image
-make docker-build
+To install the MCP server on Cline, you need to create a configuration file like ``/PATH/TO/globalStorage/saoudrizwan.claude-dev/settings/cline_mcp_settings.json` in your Cline user directory. The configuration file should contain the following:
 
-# run docker container
-make docker-run
-
-# run CI tests in docker container
-make ci-test-docker
+```json
+{
+  "mcpServers": {
+    "weather": {
+      "command": "/Users/ks6088ts/.local/bin/uv",
+      "args": [
+        "--directory",
+        "/Users/ks6088ts/src/github.com/ks6088ts-labs/mcp-python/scripts",
+        "run",
+        "weather.py"
+      ]
+    }
+  }
+}
 ```
 
-## Deployment instructions
+You can see the settings just like screenshots below:
 
-### Docker Hub
+![cline_configure_mcp_server](./docs/images/cline_configure_mcp_server.png)
 
-To publish the docker image to Docker Hub, you need to [create access token](https://app.docker.com/settings/personal-access-tokens/create) and set the following secrets in the repository settings.
+3. Try it out from Cline:
 
-```shell
-gh secret set DOCKERHUB_USERNAME --body $DOCKERHUB_USERNAME
-gh secret set DOCKERHUB_TOKEN --body $DOCKERHUB_TOKEN
-```
+## ![cline_run_mcp_server](./docs/images/cline_run_mcp_server.gif)
+
+## References
+
+- [Model Context Protocol (MCP) > Quickstart > For Server Developers](https://modelcontextprotocol.io/quickstart/server)
