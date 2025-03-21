@@ -64,3 +64,5 @@ You can see the settings just like screenshots below:
 ## References
 
 - [Model Context Protocol (MCP) > Quickstart > For Server Developers](https://modelcontextprotocol.io/quickstart/server)
+- [Model Context Protocol (MCP) > Quickstart > For Client Developers](https://modelcontextprotocol.io/quickstart/client)
+- [LangChain MCP Adapters](https://github.com/langchain-ai/langchain-mcp-adapters)
