@@ -13,6 +13,8 @@ dependencies = [
     "mcp[cli]>=1.4.1",
     "openai>=1.68.0",
     "python-dotenv>=1.0.1",
+    "typer>=0.15.2",
+    "youtube-transcript-api>=1.0.3",
 ]
 
 [project.optional-dependencies]
