@@ -100,4 +100,4 @@ Forecast: {period["detailedForecast"]}
 
 if __name__ == "__main__":
     # Initialize and run the server
-    mcp.run(transport="sse")
+    mcp.run(transport="stdio")

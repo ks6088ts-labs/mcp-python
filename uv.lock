@@ -821,6 +821,7 @@ dependencies = [
     { name = "mcp", extra = ["cli"] },
     { name = "openai" },
     { name = "python-dotenv" },
+    { name = "typer" },
     { name = "youtube-transcript-api" },
 ]
 
@@ -849,6 +850,7 @@ requires-dist = [
     { name = "mkdocs-material", marker = "extra == 'docs'", specifier = ">=9.5.49" },
     { name = "openai", specifier = ">=1.68.0" },
     { name = "python-dotenv", specifier = ">=1.0.1" },
+    { name = "typer", specifier = ">=0.15.2" },
     { name = "youtube-transcript-api", specifier = ">=1.0.3" },
 ]
 

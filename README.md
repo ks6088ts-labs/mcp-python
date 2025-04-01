@@ -50,6 +50,16 @@ To install the MCP server on Cline, you need to create a configuration file like
         "run",
         "weather_server.py"
       ]
+    },
+    "youtube_transcript": {
+      "command": "/Users/ks6088ts/.local/bin/uv",
+      "args": [
+        "--directory",
+        "/Users/ks6088ts/src/github.com/ks6088ts-labs/mcp-python/scripts",
+        "run",
+        "youtube_transcript_server.py",
+        "mcp-run"
+      ]
     }
   }
 }
