@@ -11,3 +11,9 @@ uv run python scripts/youtube_transcript_server.py get-transcript-run \
 # To run MCP server, run the following command:
 uv run python scripts/youtube_transcript_server.py mcp-run --verbose
 ```
+
+Run MCP Inspector for debugging:
+
+```shell
+uv run mcp dev scripts/youtube_transcript_server.py
+```
