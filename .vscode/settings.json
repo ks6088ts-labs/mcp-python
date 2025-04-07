@@ -1,0 +1,22 @@
+{
+  "mcp": {
+    "servers": {
+      "playwright": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@playwright/mcp@latest",
+          "--vision"
+        ]
+      },
+      "mcp-python": {
+        "command": "docker",
+        "args": [
+          "run",
+          "--rm",
+          "ks6088ts/mcp-python"
+        ]
+      }
+    }
+  }
+}

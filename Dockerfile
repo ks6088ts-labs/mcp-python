@@ -21,4 +21,5 @@ COPY . .
 # Install dependencies
 RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
 
-CMD ["python", "mcp_python/core.py"]
+# For production
+CMD ["python", "scripts/math_server.py"]
