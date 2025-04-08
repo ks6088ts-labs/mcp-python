@@ -1,4 +1,5 @@
 version = 1
+revision = 1
 requires-python = ">=3.10"
 resolution-markers = [
     "python_full_version >= '3.12.4'",
@@ -802,12 +803,6 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/10/30/20a7f33b0b884a9d14dd3aa94ff1ac9da1479fe2ad66dd9e2736075d2506/mcp-1.6.0-py3-none-any.whl", hash = "sha256:7bd24c6ea042dbec44c754f100984d186620d8b841ec30f1b19eda9b93a634d0", size = 76077 },
 ]
 
-[package.optional-dependencies]
-cli = [
-    { name = "python-dotenv" },
-    { name = "typer" },
-]
-
 [[package]]
 name = "mcp-python"
 version = "0.0.1"
@@ -818,7 +813,7 @@ dependencies = [
     { name = "langchain-mcp-adapters" },
     { name = "langchain-openai" },
     { name = "langgraph" },
-    { name = "mcp", extra = ["cli"] },
+    { name = "mcp" },
     { name = "openai" },
     { name = "python-dotenv" },
     { name = "typer" },
@@ -841,18 +836,19 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "httpx", specifier = ">=0.28.1" },
-    { name = "langchain", specifier = ">=0.3.21" },
-    { name = "langchain-mcp-adapters", specifier = ">=0.0.5" },
-    { name = "langchain-openai", specifier = ">=0.3.9" },
-    { name = "langgraph", specifier = ">=0.3.18" },
-    { name = "mcp", extras = ["cli"], specifier = ">=1.4.1" },
+    { name = "httpx", specifier = "==0.28.1" },
+    { name = "langchain", specifier = "==0.3.23" },
+    { name = "langchain-mcp-adapters", specifier = "==0.0.7" },
+    { name = "langchain-openai", specifier = "==0.3.12" },
+    { name = "langgraph", specifier = "==0.3.25" },
+    { name = "mcp", specifier = "==1.6.0" },
     { name = "mkdocs-material", marker = "extra == 'docs'", specifier = ">=9.5.49" },
     { name = "openai", specifier = ">=1.68.0" },
-    { name = "python-dotenv", specifier = ">=1.0.1" },
-    { name = "typer", specifier = ">=0.15.2" },
-    { name = "youtube-transcript-api", specifier = ">=1.0.3" },
+    { name = "python-dotenv", specifier = "==1.1.0" },
+    { name = "typer", specifier = "==0.15.2" },
+    { name = "youtube-transcript-api", specifier = "==1.0.3" },
 ]
+provides-extras = ["docs"]
 
 [package.metadata.requires-dev]
 dev = [
@@ -961,7 +957,7 @@ wheels = [
 
 [[package]]
 name = "openai"
-version = "1.70.0"
+version = "1.71.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "anyio" },
@@ -973,9 +969,9 @@ dependencies = [
     { name = "tqdm" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/87/f5/ae0f3cd226c2993b4ac1cc4b5f6ca099764689f403c14922c9356accec66/openai-1.70.0.tar.gz", hash = "sha256:e52a8d54c3efeb08cf58539b5b21a5abef25368b5432965e4de88cdf4e091b2b", size = 409640 }
+sdist = { url = "https://files.pythonhosted.org/packages/d9/19/b8f0347090a649dce55a008ec54ac6abb50553a06508cdb5e7abb2813e99/openai-1.71.0.tar.gz", hash = "sha256:52b20bb990a1780f9b0b8ccebac93416343ebd3e4e714e3eff730336833ca207", size = 409926 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/e2/39/c4b38317d2c702c4bc763957735aaeaf30dfc43b5b824121c49a4ba7ba0f/openai-1.70.0-py3-none-any.whl", hash = "sha256:f6438d053fd8b2e05fd6bef70871e832d9bbdf55e119d0ac5b92726f1ae6f614", size = 599070 },
+    { url = "https://files.pythonhosted.org/packages/c4/f7/049e85faf6a000890e5ca0edca8e9183f8a43c9e7bba869cad871da0caba/openai-1.71.0-py3-none-any.whl", hash = "sha256:e1c643738f1fff1af52bce6ef06a7716c95d089281e7011777179614f32937aa", size = 598975 },
 ]
 
 [[package]]
